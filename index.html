@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ensaio por IA | Fotos Profissionais em 24h</title>
+    <meta name="description" content="Transforme suas selfies em fotos profissionais usando IA. Entrega em até 24h, sem estúdio, com qualidade premium." />
+    <meta name="keywords" content="ensaio fotográfico, IA, fotos profissionais, inteligência artificial, edição de fotos" />
+    <meta name="author" content="Matteo Enzo" />
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="/src/assets/before-photo.webp" as="image" type="image/webp" />
+    <link rel="preload" href="/src/assets/after-photo.webp" as="image" type="image/webp" />
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Roboto:wght@400;500&display=swap" as="style" />
+    <link rel="preload" href="/src/main.tsx" as="script" crossorigin />
+    
+    <!-- DNS prefetch for external resources -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+    <link rel="dns-prefetch" href="https://connect.facebook.net" />
+    <link rel="dns-prefetch" href="https://cdn.utmify.com.br" />
+    
+    <!-- Optimized fonts loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet"></noscript>
+    
+    <!-- Critical CSS inlined for instant loading -->
+    <style>
+      /* Critical above-the-fold styles - optimized */
+      *{box-sizing:border-box}
+      body{margin:0;padding:0;font-family:'Roboto',sans-serif;background:#121212;color:#fff;overflow-x:hidden;scroll-behavior:smooth}
+      html{overflow-x:hidden}
+      .hero-section{min-height:100vh;background:linear-gradient(135deg,#121212,#1a1a1a);display:flex;align-items:center;justify-content:center;padding:1rem;contain:layout style paint}
+      .hero-container{max-width:1200px;width:100%;margin:0 auto;contain:layout style}
+      .hero-title{font-size:clamp(2rem,5vw,4rem);font-weight:700;line-height:1.2;margin-bottom:1rem;font-family:'Montserrat',sans-serif}
+      .hero-text{font-size:1.125rem;color:#a1a1aa;margin-bottom:2rem;line-height:1.6}
+      .hero-button{background:#ff6f00;color:white;padding:1rem 2rem;border:none;border-radius:0.75rem;font-size:1rem;font-weight:600;cursor:pointer;transition:transform 0.2s ease;text-decoration:none;display:inline-block}
+      .hero-button:hover{transform:translateY(-2px);box-shadow:0 4px 20px rgba(255,111,0,0.3)}
+      .loading-spinner{width:2rem;height:2rem;border:2px solid #ff6f00;border-top:transparent;border-radius:50%;animation:spin 1s linear infinite;margin:2rem auto}
+      @keyframes spin{to{transform:rotate(360deg)}}
+      /* Prevent layout shift and optimize rendering */
+      .image-container{aspect-ratio:3/4;width:100%;background:#1a1a1a;border-radius:0.5rem;overflow:hidden;contain:layout style paint}
+      img{image-rendering:-webkit-optimize-contrast;image-rendering:crisp-edges;max-width:100%;height:auto}
+      .container{max-width:100vw;overflow-x:hidden;contain:layout style paint}
+      section{max-width:100vw;overflow-x:hidden;contain:layout style}
+      /* Mobile optimizations */
+      @media (max-width:768px){
+        .hero-section{padding:0.5rem}
+        .hero-title{font-size:clamp(1.5rem,8vw,3rem)}
+        .hero-text{font-size:1rem}
+        .hero-button{padding:0.875rem 1.5rem;font-size:0.9rem}
+      }
+    </style>
+
+    <meta property="og:title" content="Ensaio por IA | Fotos Profissionais em 24h" />
+    <meta property="og:description" content="Transforme suas selfies em fotos profissionais usando IA. Entrega em até 24h, sem estúdio, com qualidade premium." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@lovable_dev" />
+    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+  </head>
+
+  <body>
+    <div id="root">
+      <!-- Fallback loading state -->
+      <div id="initial-loader" style="min-height:100vh;display:flex;align-items:center;justify-content:center;background:#121212;position:fixed;top:0;left:0;width:100%;z-index:9999;">
+        <div class="loading-spinner"></div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.tsx" defer></script>
+    
+    <!-- Optimized Meta Pixel Code -->
+    <script>
+    // Remove initial loader when React app loads
+    document.addEventListener('DOMContentLoaded', function() {
+      setTimeout(function() {
+        const loader = document.getElementById('initial-loader');
+        if (loader) {
+          loader.style.opacity = '0';
+          setTimeout(function() {
+            loader.remove();
+          }, 300);
+        }
+      }, 1000);
+    });
+
+    // Meta Pixel - load after page is ready
+    setTimeout(function() {
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      
+      if (typeof fbq !== 'undefined') {
+        fbq('init', '792578850157207');
+        fbq('track', 'PageView');
+      }
+    }, 2000);
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=792578850157207&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+    
+    <!-- Optimized UTMify Script -->
+    <script>
+      window.pixelId = "6896ac9b080e6aaa816242f4";
+      
+      // Load UTMify after delay
+      setTimeout(function() {
+        var a = document.createElement("script");
+        a.async = true;
+        a.defer = true;
+        a.src = "https://cdn.utmify.com.br/scripts/pixel/pixel.js";
+        document.head.appendChild(a);
+        
+        // Track PageView when ready
+        setTimeout(function() {
+          if (typeof utmify !== "undefined" && utmify.track) {
+            utmify.track('PageView');
+          }
+        }, 1000);
+      }, 3000);
+    </script>
+  </body>
+</html>
